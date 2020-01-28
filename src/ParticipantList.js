@@ -1,6 +1,7 @@
 import React from 'react';
 import Participant from './Participant';
 import App from './App';
+import './ParticipantList.css';
 
 export default function ParticipantList(props){
     return (

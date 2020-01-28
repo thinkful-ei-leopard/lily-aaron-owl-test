@@ -2,18 +2,16 @@ import React from 'react';
 
 
 export default function Participant (props) {
-  const isOnStage = props.onStage;
-  const inSession = props.inSession;
   return (
     <div className="Participant">
-      <img src="{props.avatar}"></img>
+      <img class="useravatar" src={props.avatar} alt="avatar"></img>
       <div className="name-stage-status">
         <h3> {props.name} </h3>
         {(() => {
-          if (inSession === true && isOnStage === true) {
+          if (props.inSession == true && props.onStage === true) {
             return <p>On Stage</p>
           }
-          else if (inSession === true && isOnStage === false) {
+          else if (props.inSession == true && props.onStage === false) {
             return <p>In Session</p>
           }  
           else {
