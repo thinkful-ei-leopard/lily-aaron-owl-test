@@ -1,4 +1,4 @@
-export default STORE {
+const STORE = {
     participants: [
         {
             id: 1,
@@ -39,7 +39,7 @@ export default STORE {
             inSession: true,
             onStage: true
         }
-    ]
+    ],
 
     chatEvents: [
     
@@ -90,6 +90,8 @@ export default STORE {
                 type: 'leave-stage',
                 timestamp: 1548852724247
             }
-        ];
+        ]
     
 };
+
+export default STORE;

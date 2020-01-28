@@ -1,9 +1,17 @@
 import React from 'react';
-import 
+import Participant from './Participant';
 
-const ParticipantList = ({props}) => {
+const ParticipantList = (props) => {
     return (
         <div className="part-list">
-        {participants.map(props.participants => )} 
+        {props.participants.map((participant) =>
+            <Participant 
+                avatar={participant.avatar}
+                name={participant.name}
+                isOnStage={participant.onStage}
+                inSession={participant.inSession}  
+            />
+        )}
+        </div> 
     )
 }
